@@ -1,3 +1,16 @@
+:root{
+    --preto: #222222;
+    --cinza-escuro: #7c7c7c;
+    --cinza-medio:  #a4a4a4;
+    --cinza-claro: #f7f7f7;
+    --azul-forte: #122ab2;
+    --azul-suave: #2c70ff;
+    --purple: #ae81ff;
+    --pink: #f9265e;
+    --blue: #66d9eb;
+}
+
+
 body, h1, h2, p, ul, li, a{
     margin: 0px;
     padding: 0px;
@@ -9,7 +22,7 @@ body, h1, h2, p, ul, li, a{
 
 body {
     font-family: "Nunito";
-    color: #222222;
+    color: var(--preto);
 }
 
 ul {
@@ -26,10 +39,12 @@ img {
 }
 
 
+
+
 /* ========================== SUPERINFO */ 
 
 .superinfo-bg {
-    background: #122ab2;
+    background: var(--azul-forte);
     color: white;
 }
 
@@ -52,7 +67,7 @@ img {
 /* ========================== MENU */ 
 
 .menu-bg{
-    background: #2c70ff;
+    background: var(--azul-suave);
 }
 
 .menu{
@@ -87,7 +102,7 @@ img {
 }
 
 .menu-nav a:hover {
-    color: #122ab2;
+    color: var(--azul-forte);
 }
 
 /* ========================== INTRODUÇÃO */
@@ -103,8 +118,8 @@ img {
 /* ========================== SOBRE */
 
 .sobre{
-    border-top: 2px solid #2c70ff;
-    border-bottom: 2px solid #2c70ff;
+    border-top: 2px solid var(--azul-suave) ;
+    border-bottom: 2px solid var(--azul-suave);
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0;
@@ -126,7 +141,7 @@ img {
     font-size: 1.25em;
     line-height: 1.4;
     margin-bottom: 1em;
-    color: #7c7c7c;
+    color: var(--cinza-escuro);
 }
 
 .sobre-img{
@@ -158,27 +173,27 @@ img {
 
 .produtos-item h2{
     font-size: 3em;
-    color: #a4a4a4;
-    background: #f7f7f7;
+    color: var(--cinza-medio);
+    background: var(--cinza-claro);
     padding: 60px 20px;
 }
 
 .purple{
-    border-top: 8px solid #ae81ff;
+    border-top: 8px solid var(--purple);
 }
 
 .pink{
-    border-top: 8px solid #f9265e;
+    border-top: 8px solid var(--pink);
 }
 
 .blue{
-    border-top: 8px solid #66d9eb;
+    border-top: 8px solid var(--blue);
 }
 
 /* ========================== PREÇOS */
 
 .preco {
-    background: #f7f7f7;
+    background: var(--cinza-claro);
     padding: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -195,7 +210,7 @@ img {
 
 .preco-item h2{
     font-size: 3em;
-    color: #a4a4a4;
+    color: var(--cinza-medio);
     text-align: center;
     margin-top: 20px;
 }
@@ -221,7 +236,7 @@ img {
     margin: 20px auto;
     font-size: 1.25em;
     font-style: italic;
-    color: #7c7c7c;
+    color: var(--cinza-escuro);
 }
 
 .preco-item li{
@@ -236,7 +251,7 @@ img {
     display: block;
     width: 6px;
     height: 6px;
-    background: #2c70ff;
+    background: var(--azul-suave);
     border-radius: 50%;
 }
 
@@ -245,7 +260,7 @@ img {
     display: block;
     margin: 20px auto;
     border: 4px solid;
-    color: #222222;
+    color: var(--preto);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2.25em;
@@ -283,7 +298,7 @@ img {
 
 .qualidade-item h2{
     font-size: 2.25em;
-    color: #a4a4a4;
+    color: var(--cinza-medio);
     margin-bottom:20px ;
 }
 
@@ -296,27 +311,27 @@ img {
 }
 
 .qualidade-item:nth-of-type(3n+1) h2::before { /* vai pegar o traço criado contando o 1 e depois o terceiro item pra ficar da mesma cor */
-    background-color: #ae81ff;
+    background-color: var(--purple);
 }
 
 .qualidade-item:nth-of-type(3n+2) h2::before { /* vai pegar o traço lateral criado contando o 1 e depois o terceiro item pra ficar da mesma cor */
-    background-color: #f9265e;
+    background-color: var(--pink);
 }
 
 .qualidade-item:nth-of-type(3n+3) h2::before { /* vai pegar o traço criado contando o 1 e depois o terceiro item pra ficar da mesma cor */
-    background-color: #66d9eb;
+    background-color: var(--blue);
 }
 
 .qualidade-item p{
     font-size: 1.25em;
     line-height: 1.4;
-    color: #7c7c7c;
+    color: var(--cinza-escuro);
 }
 
 /* ========================== NEWSLETTER */
 
 .newsletter {
-    background: #f7f7f7;
+    background: var(--cinza-claro);
     padding: 60px calc((100% - 960px) / 2);
     display: flex;
     flex-wrap: wrap;
@@ -329,14 +344,14 @@ img {
 
 .newsletter-info h1{
     font-size: 3em;
-    color: #a4a4a4;
+    color: var(--cinza-medio);
 }
 
 .newsletter-info p {
     font-size: 1.25em;
     font-style: italic;
     max-width: 230px;
-    color: #7c7c7c;
+    color: var(--cinza-escuro);
     margin-bottom: 10px;
 }
 
@@ -351,10 +366,10 @@ img {
 .newsletter-form input{
     flex: 3 1 260px;
     font-size: 1.25em;
-    color: #7c7c7c;
+    color: var(--cinza-escuro);
     font-style: italic;
     font-family: 'Nunito';
-    border: 4px solid #2c70ff;
+    border: 4px solid var(--azul-suave);
     background: transparent;
     padding: 15px 10px;
     margin: 0px;
@@ -367,7 +382,7 @@ img {
     font-size: 2.25em;
     font-weight: bold;
     text-transform: uppercase;
-    background: #2c70ff;
+    background: var(--azul-suave);
     color: white;
     margin: 0px;
     cursor: pointer;
@@ -386,7 +401,7 @@ img {
 
 .footer {
     display: flex;
-    background: #2c70ff;
+    background: var(--azul-suave);
     height: 200px;
     align-items: center;
 }
@@ -395,5 +410,5 @@ img {
      flex: 1;
      text-align: center;
      font-size: 2.25em;
-     color: #122ab2;
+     color:var(--azul-forte);
 }
