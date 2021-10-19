@@ -8,6 +8,8 @@
     --purple: #ae81ff;
     --pink: #f9265e;
     --blue: #66d9eb;
+    --cabecalho:linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+
 }
 
 
@@ -33,18 +35,11 @@ a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
-
-
 
 /* ========================== SUPERINFO */ 
 
 .superinfo-bg {
-    background: var(--azul-forte);
+    background: var(--cabecalho);
     color: white;
 }
 
@@ -54,11 +49,13 @@ img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    
 }
 
 .superinfo p, .superinfo a {
-    margin: 0 10px 10px 10px;
+    margin: 5px 5px;
 }
 .superinfo a {
     color: white;
@@ -67,17 +64,17 @@ img {
 /* ========================== MENU */ 
 
 .menu-bg{
-    background: var(--azul-suave);
+    background: var(--cabecalho);
 }
 
 .menu{
     max-width: 960px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 15px 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .menu a{
@@ -87,7 +84,7 @@ img {
 .menu-logo a{
     font-size:2.25em;
     font-weight: bold;
-    margin: 0 10px;
+    margin:0 auto;
 }
 
 .menu-nav {
@@ -95,10 +92,16 @@ img {
     flex-wrap: wrap;
 }
 
+.menu-nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .menu-nav a{
     font-size: 1.25em;
-    display: block;
-    padding: 10px;
+    display: flex ;
+    padding: 5px;
 }
 
 .menu-nav a:hover {
@@ -112,23 +115,23 @@ img {
     line-height: 1;
     max-width: 960px;
     margin: 0 auto;
-    padding: 60px 10px;
+    padding: 50px 10px;
 }
 
 /* ========================== SOBRE */
 
 .sobre{
-    border-top: 2px solid var(--azul-suave) ;
-    border-bottom: 2px solid var(--azul-suave);
+    border-top: 2px solid var(--purple) ;
+    border-bottom: 2px solid var(--purple);
     max-width: 960px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 50px 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .sobre-info{
-    flex: 2 1 300px;
+    flex: 1 1 300px;
     margin: 0 10px;
 }
 
@@ -141,12 +144,20 @@ img {
     font-size: 1.25em;
     line-height: 1.4;
     margin-bottom: 1em;
+    text-align: justify;
+    max-width: 500px;
     color: var(--cinza-escuro);
 }
 
 .sobre-img{
-    flex: 1 1 160px;
-    margin: 0 10px;
+ display: flex;
+ flex: 1 1 100px;
+ flex-direction: column;
+ width:30%;
+ min-width: 250px;
+}
+.sobre-img img{
+    margin-bottom: 20px;
 }
 
 /* ========================== PRODUTOS */
@@ -190,21 +201,38 @@ img {
     border-top: 8px solid var(--blue);
 }
 
+.produtos-container img {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 50%;
+}
+
 /* ========================== PREÇOS */
 
 .preco {
-    background: var(--cinza-claro);
-    padding: 60px;
+    max-width: 960px;
+    border-top: 2px solid var(--purple);
+    border-bottom: 2px solid var(--purple);
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    margin:  15px auto;
+    padding: 15px;
+}
+
+.preco .preco-item{
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    background: var(--cinza-claro);
+    padding: 40px;
 }
 
 .preco-item {
-    flex: 1 1 260px;
+    flex: 1 1 300px;
     border: 4px solid white;
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     /*min-width: 260px;  dica: usar 260px pois é o valor minimo de largura no mobile ou usar o flex basis, tira o min-width e coloca só flex: 1 1 260px */
 }
 
@@ -212,12 +240,12 @@ img {
     font-size: 3em;
     color: var(--cinza-medio);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .preco-item span{
     max-width: 300px;
-    margin: 20px auto;
+    margin: 10px auto;
     display: block;
     font-size: 3em;
     text-align: center;
@@ -232,8 +260,8 @@ img {
 }
 
 .preco-item ul{
-    max-width: 300px;
-    margin: 20px auto;
+    max-width: 200px;
+    margin: 10px auto;
     font-size: 1.25em;
     font-style: italic;
     color: var(--cinza-escuro);
@@ -343,12 +371,12 @@ img {
 }
 
 .newsletter-info h1{
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--cinza-medio);
 }
 
 .newsletter-info p {
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-style: italic;
     max-width: 230px;
     color: var(--cinza-escuro);
@@ -369,25 +397,25 @@ img {
     color: var(--cinza-escuro);
     font-style: italic;
     font-family: 'Nunito';
-    border: 4px solid var(--azul-suave);
+    border: 4px solid #574ae8;
     background: transparent;
     padding: 15px 10px;
     margin: 0px;
-    border-radius: 0px;
+    border-radius: 5px;
 }
 
 .newsletter-form button{
     flex: 1 1 260px;
     font-family: 'Nunito';
-    font-size: 2.25em;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
-    background: var(--azul-suave);
+    background: var(--cabecalho);
     color: white;
     margin: 0px;
     cursor: pointer;
-    border: 0px;
-    padding: 15px 10px;
+    border-radius: 0 5px 5px 0;
+
 }
 
 @media (max-width: 600px) {
@@ -401,14 +429,14 @@ img {
 
 .footer {
     display: flex;
-    background: var(--azul-suave);
-    height: 200px;
+    background: var(--cabecalho);
+    height: 100px;
     align-items: center;
 }
 
 .footer p {
      flex: 1;
      text-align: center;
-     font-size: 2.25em;
-     color:var(--azul-forte);
+     font-size: 2em;
+     color: white
 }
